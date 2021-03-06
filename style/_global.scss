@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$font-main: "SF Pro Text", sans-serif;
+
+$clr-white: #fff;
+$clr-bg: #fafafa;
+$clr-primary-deep: #1c538a;
+$clr-primary: #0351df;
+$clr-primary-light: #e5efff;
+$clr-grey-700: #7082af;
+$clr-grey-400: #e5e5e5;
+$clr-grey-550: #929bb4;
+
+@font-face {
+    font-family: $font-main;
+    src: url(../fonts/Source_Sans_Pro/FontsFree-Net-SFProText-Regular-1.ttf)
+            format(opentype),
+        url(../fonts/Source_Sans_Pro/FontsFree-Net-SFProText-Semibold-1.ttf)
+            format(opentype),
+        url(../fonts/Source_Sans_Pro/FontsFree-Net-SFProText-Medium.ttf)
+            format(opentype);
+}
+
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-main;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
