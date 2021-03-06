@@ -1,0 +1,104 @@
+.header {
+    background: #ffffff;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+
+    &__logo {
+        padding: 0 1.6rem;
+        border-right: 1px solid $clr-grey-400;
+    }
+
+    &__line {
+        height: 3.2rem;
+        width: 0.1rem;
+        background-color: $clr-grey-400;
+    }
+
+    &__list {
+        color: $clr-primary-deep;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__account {
+        margin: 0 1.6rem;
+    }
+
+    &__list-item {
+        padding: 0.8rem 2rem;
+        display: flex;
+        align-items: center;
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        font-weight: 400;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+
+        &:not(:last-child) {
+            margin-right: 0.8rem;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            margin-right: 0.8rem;
+            height: 2.4rem;
+            width: 2.4rem;
+        }
+
+        &--category::before {
+            background: url(../img/nav-icons/Category.svg) no-repeat;
+        }
+
+        &--edit::before {
+            background: url(../img/nav-icons/Edit.svg) no-repeat;
+        }
+
+        &--settings::before {
+            background: url(../img/nav-icons/Setting.svg) no-repeat;
+        }
+
+        &--send::before {
+            background: url(../img/nav-icons/Send.svg) no-repeat;
+        }
+
+        &--chart::before {
+            background: url(../img/nav-icons/Chart.svg) no-repeat;
+        }
+
+        &--show::before {
+            background: url(../img/nav-icons/Show.svg) no-repeat;
+        }
+
+        &--active {
+            background-color: $clr-primary-light;
+            color: $clr-primary;
+        }
+
+        &--upgrade {
+            background: rgba(255, 174, 0, 0.8);
+            box-shadow: 0px 0px 10px rgba(255, 174, 0, 0.4);
+            color: $clr-white;
+            font-weight: 600;
+        }
+
+        &--upgrade::before {
+            background: url(../img/nav-icons/upgrade.png) no-repeat;
+        }
+
+        &--ml-auto {
+            margin-left: auto !important;
+        }
+
+        &--mr-auto {
+            margin-right: auto !important;
+        }
+    }
+}
