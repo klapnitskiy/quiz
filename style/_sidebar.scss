@@ -1,0 +1,67 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    min-height: 90vh;
+    padding: 2.6rem 2.2rem;
+    background-color: $clr-white;
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        font-weight: normal;
+        color: $clr-primary-deep;
+        list-style: none;
+        counter-reset: my-awesome-counter;
+    }
+
+    &__list-item {
+        padding: 1.2rem;
+        border-radius: 0.6rem;
+        counter-increment: my-awesome-counter;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &::before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.4rem;
+            margin-right: 1.2rem;
+            border-radius: 50%;
+            content: counter(my-awesome-counter);
+            width: 2rem;
+            height: 2rem;
+            background-color: #f7f9ff;
+            color: $clr-primary-deep;
+            font-weight: bold;
+        }
+
+        &--active {
+            background-color: $clr-primary-light;
+        }
+    }
+
+    &__button {
+        @include btnReset;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        color: $clr-primary-deep;
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+
+        &::before {
+            content: url(../img/btn.svg);
+            max-height: 3.2rem;
+            margin-right: 0.8rem;
+        }
+    }
+}

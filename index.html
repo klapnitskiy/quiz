@@ -58,19 +58,36 @@
             </div>
         </header>
 
-        <main class="main">
-            <aside class="page page--sidebar">
-                <div class="sidebar">
-                    <p class="page__text--side">Создание квиза</p>
-                    <ol class="sidebar__list">
-                        <li class="sidebar__list-item">Стартовая страница</li>
-                        <li class="sidebar__list-item">Вопросы</li>
-                        <li class="sidebar__list-item">Результаты</li>
-                        <li class="sidebar__list-item">Форма контактов</li>
-                        <li class="sidebar__list-item">Скидки, бонусы</li>
-                    </ol>
-                </div>
-            </aside>
+        <main class="page page--main">
+            <div class="page__container">
+                <aside class="page page--sidebar">
+                    <div class="sidebar">
+                        <p class="sidebar__title page__text--side">
+                            Создание квиза
+                        </p>
+                        <ol class="sidebar__list">
+                            <li class="sidebar__list-item">
+                                Стартовая страница
+                            </li>
+                            <li
+                                class="sidebar__list-item sidebar__list-item--active"
+                            >
+                                Вопросы
+                            </li>
+                            <li class="sidebar__list-item">Результаты</li>
+                            <li class="sidebar__list-item">Форма контактов</li>
+                            <li class="sidebar__list-item">Скидки, бонусы</li>
+                        </ol>
+                        <button class="sidebar__button">
+                            Запустить обучение
+                        </button>
+                    </div>
+                </aside>
+                <section class="page page--content">
+                    <div class="quiz-items"></div>
+                    <aside class="quiz-consult"></aside>
+                </section>
+            </div>
         </main>
     </body>
 </html>

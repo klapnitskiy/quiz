@@ -27,6 +27,15 @@ $clr-grey-550: #929bb4;
             format(opentype);
 }
 
+@mixin btnReset {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+}
+
 // @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
 
 html {
@@ -35,6 +44,7 @@ html {
 
 body {
     font-family: $font-main;
+    background-color: $clr-bg;
 }
 
 img {

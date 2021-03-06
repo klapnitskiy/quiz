@@ -18,6 +18,7 @@ html {
 
 body {
   font-family: "SF Pro Text", sans-serif;
+  background-color: #fafafa;
 }
 
 img {
@@ -37,6 +38,7 @@ img {
   font-weight: 500;
   line-height: 1.4rem;
   color: #929bb4;
+  text-transform: uppercase;
 }
 
 .header {
@@ -53,6 +55,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.6rem 0;
+  position: relative;
 }
 
 .header__logo {
@@ -158,5 +161,97 @@ img {
 
 .header__list-item--mr-auto {
   margin-right: auto !important;
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 24rem;
+  min-height: 90vh;
+  padding: 2.6rem 2.2rem;
+  background-color: #fff;
+}
+
+.sidebar__title {
+  margin-bottom: 2rem;
+}
+
+.sidebar__list {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: normal;
+  color: #1c538a;
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+
+.sidebar__list-item {
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  counter-increment: my-awesome-counter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.sidebar__list-item::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  margin-right: 1.2rem;
+  border-radius: 50%;
+  content: counter(my-awesome-counter);
+  width: 2rem;
+  height: 2rem;
+  background-color: #f7f9ff;
+  color: #1c538a;
+  font-weight: bold;
+}
+
+.sidebar__list-item--active {
+  background-color: #e5efff;
+}
+
+.sidebar__button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #1c538a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: auto;
+}
+
+.sidebar__button::before {
+  content: url(../img/btn.svg);
+  max-height: 3.2rem;
+  margin-right: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */
