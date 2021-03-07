@@ -1,0 +1,111 @@
+.main {
+    display: flex;
+}
+
+.quiz {
+    margin-top: 6.4rem;
+
+    &__item-main {
+        padding: 3.2rem;
+    }
+
+    &__item-settings {
+        padding: 1.8rem 3.2rem;
+    }
+
+    &__item {
+        width: 67.2rem;
+        background-color: $clr-white;
+        box-shadow: 0px 8px 15px rgba(0, 23, 83, 0.1);
+        border-radius: 8px;
+    }
+
+    &__item-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2rem;
+        color: $clr-black;
+        margin-bottom: 4rem;
+    }
+
+    &__item-subtitle {
+        display: block;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        font-weight: normal;
+        color: $clr-primary-deep;
+        margin-bottom: 1.6rem;
+    }
+
+    &__item-input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    &__item-inputs {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__item-label {
+        display: inline-block;
+        padding: 1.2rem 1.6rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        color: $clr-primary-deep;
+        cursor: pointer;
+        background: $clr-grey;
+        border: 1px solid $clr-primary-light2;
+        border-radius: 0.6rem;
+    }
+
+    &__item-input:checked ~ &__item-label {
+        border-color: $clr-grey-550;
+    }
+
+    &__item-settings {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $clr-primary-light2;
+    }
+
+    &__item-edit {
+        @include btnReset;
+        color: $clr-primary;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            margin-right: 1rem;
+            content: url(../img/Setting.svg);
+            height: 2rem;
+        }
+    }
+
+    &__item-branch {
+        display: flex;
+    }
+
+    &__item-counterIcon {
+        margin-right: 0.8rem;
+        &::before {
+            content: url(../img/ion_git-branch.svg);
+        }
+    }
+
+    &__item-counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        width: 2rem;
+        background-color: #ffb81f;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        font-weight: 700;
+        border-radius: 50%;
+        color: $clr-white;
+    }
+}
